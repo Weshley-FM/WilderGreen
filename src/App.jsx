@@ -11,26 +11,12 @@ import Donate from './pages/Donate'
 import Resources from './pages/Resources'
 import Contact from './pages/Contact'
 import ThemeToggle from './components/ThemeToggle'
+import Header from './components/Header'
 
 export default function App(){
   return (
     <div className="app">
-      <header className="site-header">
-        <div className="container header-inner">
-          <NavLink to="/" className="logo">WilderGreen</NavLink>
-          <nav className="site-nav">
-            <NavLink to="/about" className={({isActive})=> isActive? 'active':''}>About</NavLink>
-            <NavLink to="/projects" className={({isActive})=> isActive? 'active':''}>Projects</NavLink>
-            <NavLink to="/team" className={({isActive})=> isActive? 'active':''}>Team</NavLink>
-            <NavLink to="/events" className={({isActive})=> isActive? 'active':''}>Events</NavLink>
-            <NavLink to="/resources" className={({isActive})=> isActive? 'active':''}>Resources</NavLink>
-            <NavLink to="/contact" className={({isActive})=> isActive? 'active':''}>Contact</NavLink>
-            <NavLink to="/profile" className={({isActive})=> isActive? 'active':''}>Profile</NavLink>
-            <a href="#donate" className="donate">Donate</a>
-            <ThemeToggle />
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main>
         <Routes>

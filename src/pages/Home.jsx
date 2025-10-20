@@ -3,91 +3,56 @@ import React from 'react'
 export default function Home(){
   return (
     <div className="home-page">
-      <section className="hero">
+      <section className="hero cinematic-hero">
         <div className="container hero-inner">
-          <div className="hero-content">
-            <h1 className="hero-title">Grow Green. Give Green.</h1>
-            <p className="hero-sub">Community activities and fundraisers that restore nature and bring people together.</p>
-            <div className="hero-cta">
-              <a href="/get-started" className="btn">Get Started</a>
-              <a href="#events" className="btn outline">See Events</a>
+          <div className="hero-left">
+            <h1 className="hero-title">Restore nature. Empower communities.</h1>
+            <p className="hero-lead">WilderGreen organizes community-led restoration projects, educational programs, and fundraisers to create measurable environmental impact.</p>
+            <div className="hero-actions">
+              <a className="btn primary" href="/projects">Explore Projects</a>
+              <a className="btn ghost" href="/get-started">Get Involved</a>
+            </div>
+            <div className="hero-stats">
+              <div><strong>48+</strong><span>Events</span></div>
+              <div><strong>1.2k</strong><span>Volunteers</span></div>
+              <div><strong>3.4k</strong><span>Saplings Planted</span></div>
             </div>
           </div>
-          <div className="hero-visual" aria-hidden>
-            <div className="leaf-group">
-              {/* Abstract SVG mark inspired by cinematic studio branding */}
-              <svg className="visual-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden>
+          <div className="hero-right">
+            <div className="visual-card">
+              <svg className="visual-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden>
                 <defs>
-                  <linearGradient id="g1" x1="0" x2="1">
+                  <linearGradient id="gradA" x1="0" x2="1">
                     <stop offset="0%" stopColor="#00b7ff" />
                     <stop offset="100%" stopColor="#6cf0c1" />
                   </linearGradient>
                 </defs>
-                <rect x="0" y="0" width="200" height="200" rx="20" fill="url(#g1)" opacity="0.08" />
-                <path d="M40 140 C70 40, 130 40, 160 140" stroke="#00b7ff" strokeWidth="6" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.95" />
-                <circle cx="72" cy="92" r="8" fill="#6cf0c1" opacity="0.95" />
-                <circle cx="128" cy="92" r="8" fill="#00b7ff" opacity="0.95" />
+                <rect x="0" y="0" width="400" height="300" rx="14" fill="url(#gradA)" opacity="0.06" />
+                <g stroke="#00b7ff" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" fill="none">
+                  <path d="M40 220 C80 60, 320 60, 360 220" opacity="0.95" />
+                </g>
               </svg>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="mission" className="section container">
-        <h2>Our Mission</h2>
-        <p>We organize local cleanups, tree plantings, educational workshops and fundraising events to support environmental initiatives and community resilience.</p>
-      </section>
-
-      <section id="activities" className="section activities container">
-        <h2>Activities</h2>
+      <section className="section container showcase">
+        <h2>Featured Projects</h2>
         <div className="grid">
           <article className="card">
-            <div className="icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                <path d="M3 6h18" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
-                <path d="M7 6v12" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
-                <path d="M17 6v12" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
-              </svg>
-            </div>
-            <h3>Community Cleanups</h3>
-            <p>Volunteer with neighbors to clean parks and waterways.</p>
+            <h3>Riverside Restoration</h3>
+            <p>Rehabilitating riverbanks and improving water quality with native planting.</p>
           </article>
           <article className="card">
-            <div className="icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                <path d="M12 3v18" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
-                <path d="M5 12h14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
-              </svg>
-            </div>
-            <h3>Tree Planting</h3>
-            <p>Restore canopy and improve biodiversity with planting days.</p>
+            <h3>Urban Canopy</h3>
+            <p>Expanding tree cover in neighborhoods to cool streets and support biodiversity.</p>
           </article>
           <article className="card">
-            <div className="icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                <path d="M4 6h16v12H4z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M8 10h8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
-              </svg>
-            </div>
-            <h3>Workshops</h3>
-            <p>Learn practical skills: composting, native gardening and more.</p>
+            <h3>Community Gardens</h3>
+            <p>Creating shared spaces for food, education, and resilience.</p>
           </article>
         </div>
-      </section>
-
-      <section id="events" className="section container">
-        <h2>Upcoming Events</h2>
-        <div className="events-row">
-          <div className="event">Riverside Cleanup — <em>Nov 8, 2025</em></div>
-          <div className="event">Tree Planting Day — <em>Nov 22, 2025</em></div>
-          <div className="event">Fundraiser Gala — <em>Dec 6, 2025</em></div>
-        </div>
-      </section>
-
-      <section id="donate" className="section donate container">
-        <h2>Support Our Work</h2>
-        <p>Your donation funds supplies, saplings and outreach to expand our impact.</p>
-        <a className="btn" href="#">Donate Now</a>
       </section>
     </div>
   )
