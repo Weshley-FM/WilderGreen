@@ -1,35 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// App.js
+import React from 'react';
+// Import the component you want to display
+import Navbar from './components/Navbar.jsx'; 
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+        // This is the main JSX structure for your application
+        <div className="App">
+            {/* The Navbar component is rendered as a custom JSX tag */}
+            <Navbar /> 
+            
+            <main style={{ padding: '20px', textAlign: 'center' }}>
+                <h2>Welcome to Your JSX-Powered React App!</h2>
+                <p>The navigation bar above was created using the Navbar component.</p>
+            </main>
+        </div>
+    );
 }
 
-export default App
+export default App;
